@@ -8,6 +8,8 @@ import goods from './components/goods/goods.vue';
 import ratings from './components/ratings/ratings.vue';
 import seller from './components/seller/seller.vue';
 
+import './common/stylus/index.styl';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -19,11 +21,11 @@ let router = new VueRouter({
 'linkActiveClass': 'active',
 routes // （缩写）相当于 routes: routes
 });
-new Vue({
-el: '#app',
- router,
- render: h => h(App)
-});
+let app = new Vue({
+  router
+}).$mount('#app');
+  router.push('/goods');
+export default app;
 
 router.push('/goods');
 

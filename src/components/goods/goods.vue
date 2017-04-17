@@ -1,6 +1,6 @@
 <template>
 	<div>
-		header
+		good
 	</div>
 
 </template>
